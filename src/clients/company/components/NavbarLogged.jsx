@@ -19,9 +19,9 @@ const NavbarLogged = () => {
                 <Logo />
             </div>
             <div className='flex gap-5 font-semibold'>
-                <a href="/candidatures" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Candidatures</a>
-                <a href="/#apropos" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Apropos</a>
-                <a href="/#contact" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Contact</a>
+                <Link to="/candidatures" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Candidatures</Link>
+                <Link to="/#apropos" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Apropos</Link>
+                <Link to="/#contact" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Contact</Link>
             </div>
             <div>
               <button onClick={handleDropdown} className='flex gap-1 items-center text-lg'>
@@ -62,9 +62,9 @@ const NavbarLogged = () => {
                 </button>
             </div>
             <div className='z-5 flex flex-col justify-center items-center gap-7 bg-green-100 font-semibold text-2xl'>
-                <a href="/candidature" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Candidatures</a>
-                <a href="/#apropos" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Apropos</a>
-                <a href="/#contact" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Contact</a>
+                <Link to="/candidature" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Candidatures</Link>
+                <Link to="/#apropos" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Apropos</Link>
+                <Link to="/#contact" className='hover:text-green-900 hover:underline hover:underline-offset-8'>Contact</Link>
                 <Link to="/company-name/profile" className='hover:text-green-600 flex items-center gap-1'><HiOutlineUserCircle/><span className='font-semibold'>R-CORP</span></Link>
                 <Link to="/company-name/setting" className='hover:text-green-600'>Paramètre</Link>
                 <Link to="/company-name/logout" className='flex items-center gap-1 hover:text-green-600'><HiOutlineLogout /><span>Deconnexion</span></Link>

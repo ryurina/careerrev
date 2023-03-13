@@ -6,6 +6,7 @@ import EmployeeForm from "./clients/employee/EmployeeForm";
 import CompanyFormSignup from "./clients/company/CompanyFormSignup";
 import CompanyFormLogin from "./clients/company/CompanyFormLogin";
 import Candidats from "./clients/employee/Candidats";
+import CandidateProfile from "./clients/employee/CandidateProfile";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />}/>
       <Route path="/candidatures" element={<Candidats />}/>
+      <Route path="/candidatures/:id" element={<CandidateProfile />}/>
       <Route path="/client/employee" element={<EmployeeForm />}/>
       <Route path="/client/company/signup" element={<CompanyFormSignup />}/>
       <Route path="/client/company/login" element={<CompanyFormLogin />}/>

@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../landing-page/components/Footer'
 import NavbarLogged from '../company/components/NavbarLogged'
 import CandidateCard from './CandidateCard'
 import {HiPlus} from 'react-icons/hi'
 
 const Candidats = () => {
+  const [voirplus, setVoirplus] = useState(6)
+  const seeMore = () =>{
+    setVoirplus(voirplus + 3)
+  }
   return (
     <div className='p-2 md:max-w-[88%] md:mx-auto text-slate-900 space-y-5'>
         <NavbarLogged />

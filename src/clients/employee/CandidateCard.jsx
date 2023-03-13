@@ -1,11 +1,14 @@
 import React from 'react'
 import ProfileImg from '../../assets/img/profilepic.jpg'
 import {HiOutlineDownload, HiPlusSm} from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 
 const CandidateCard = () => {
   return (
     <div className='max-w-sm rounded-lg border-[1px] overflow-hidden shadow-lg text-slate-900'>
-        <img src={ProfileImg} alt="CarreerRev" className='w-full'/>
+        <Link to="/candidatures/JohnDoe">
+          <img src={ProfileImg} alt="CarreerRev" className='w-full'/>
+        </Link>
         <div className='p-3'>
             <h3 className='text-lg font-semibold'>John Doe</h3>
             <p>
