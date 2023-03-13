@@ -54,7 +54,7 @@ function Footer() {
                 bgColor='transparent'
                 />
             </div>
-        <p>Copyright &copy; <span className='font-semibold'>CarrerRev</span> 2023.</p>
+        <p>Copyright &copy; <span className='font-semibold'>CarerRev</span> 2023.</p>
         <p>Design by <a href="https://github.com/ryurina" className='text-green-600'>ryurina</a>.</p>
       </div>
     </div>
