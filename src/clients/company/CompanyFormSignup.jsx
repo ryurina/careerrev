@@ -24,7 +24,7 @@ const CompanyFormSignup = () => {
                 </label>
                 <label className='flex flex-col'>
                     <span className='font-semibold'>Téléphone: </span>
-                    <input type="number" className='border-[1px] border-green-600 rounded-lg py-1 px-2 shadow-sm text-slate-900 focus:shadow-md' placeholder='03X XX XXX XX'/>
+                    <input type="tel" className='border-[1px] border-green-600 rounded-lg py-1 px-2 shadow-sm text-slate-900 focus:shadow-md' placeholder='03X XX XXX XX'/>
                 </label>
                 <label className='flex flex-col'>
                     <span className='font-semibold'>Mot de passe: </span>
