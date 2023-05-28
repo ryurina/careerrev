@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../../../components/Logo';
 import { Link } from 'react-router-dom'
 import { HiMenuAlt3, HiX, HiOutlineUserCircle, HiOutlineLogout } from "react-icons/hi";
@@ -6,6 +6,17 @@ import { HiMenuAlt3, HiX, HiOutlineUserCircle, HiOutlineLogout } from "react-ico
 const NavbarLogged = () => {
     const [nav, setNav] = useState(false)
     const [dropdown, setDropdown] = useState(false)
+    let menuRef = useRef(null)
+
+    useEffect(() => {
+        let handler = (e) => {
+            if(!menuRef.current.contains(e.target)){
+                setDropdown(false);
+            }
+        }
+        document.addEventListener("mousedown", handler)
+    })
+
     const handleNav = () =>{
         setNav(!nav)
     }
@@ -32,7 +43,7 @@ const NavbarLogged = () => {
             {
                 dropdown
                 ?
-                <div className='bg-green-100 p-3 text-lg shadow-md rounded-md fixed mx-r-5 flex flex-col'>
+                <div className='bg-green-100 p-3 text-lg shadow-md rounded-md fixed mx-r-5 flex flex-col' ref={menuRef}>
                     <Link to="/company-name/profile" className='hover:text-green-600'>Profile</Link>
                     <Link to="/company-name/setting" className='hover:text-green-600'>Paramètre</Link>
                     <Link to="/company-name/logout" className='flex items-center gap-1 hover:text-green-600'><HiOutlineLogout /><span>Deconnexion</span></Link>
